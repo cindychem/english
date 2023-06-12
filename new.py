@@ -6,11 +6,11 @@ def read( word ):
 
     html = requests.get( url )
     bs = BeautifulSoup(html.text,'lxml')
-    data = bs.find_all('ul')[0]
+    data = bs.find('h1').text
+    row = bs.find('strong').text
     try:
-        row = data.find_all('li')[0]
-        phones = row.find_all('strong').text
-        phone = for e in phones
+        chinese = data
+        phone = row
         s = " ".join( phone )
         return( s )
     except:
