@@ -6,13 +6,12 @@ def read( word ):
 
     html = requests.get( url )
     bs = BeautifulSoup(html.text,'lxml')
-    data = bs.find('h1').text
     row = bs.find('strong').text
     try:
-        chinese = data
         phones = row
-        s = " ".join( phones )
+        phone = [e.text for e in phones]
+        s = " ".join( phone )
         # s = row.find('sub')
-        print( chinese + s )
+        print( s )
     except:
         return( '查無此字' )
