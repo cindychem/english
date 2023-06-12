@@ -12,6 +12,6 @@ try:
     phones = row
     s = " ".join( phones )
     # s = row.find('sub')
-    return( chinese + s )
+    return( s )
 except:
     return( '查無此字' )
