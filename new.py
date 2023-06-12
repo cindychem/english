@@ -9,8 +9,8 @@ def read( word ):
     data = bs.find_all('ul')[0]
     try:
         row = data.find_all('li')[0]
-        phones = row.find_all('strong')
-        phone = [e.text for e in phones]
+        phones = row.find_all('strong').text
+        phone = for e in phones
         s = " ".join( phone )
         return( s )
     except:
