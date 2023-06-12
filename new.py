@@ -12,6 +12,6 @@ def read( word ):
         chinese = data
         phone = row
         s = " ".join( phone )
-        return( chinese + \n s )
+        return( chinese + s\n )
     except:
         return( '查無此字' )
